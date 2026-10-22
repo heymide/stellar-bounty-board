@@ -72,6 +72,8 @@ vi.mock('./MaintainerDashboard', () => ({
 vi.mock('./components/FreighterConnectButton', () => ({
   default: () => <button type="button">Connect Wallet</button>,
 }));
+
+vi.mock('./i18n/I18nContext', () => ({
   useI18n: () => ({ t: (_key: string, fallback: string) => fallback }),
   LanguageSwitcher: () => null,
   I18nProvider: ({ children }: { children: React.ReactNode }) => <>{children}</>,
